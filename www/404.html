@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404: Routing Anomaly Detected | robotlee.xyz</title>
+    
+    <link rel="icon" type="image/png" href="https://robotlee.xyz/favicon.png">
+    
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script>
+      window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        .error-grid-bg {
+            background-color: #020617;
+            background-image: linear-gradient(rgba(225, 29, 72, 0.005) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(225, 29, 72, 0.005) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+    </style>
+</head>
+<body class="error-grid-bg text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between items-center selection:bg-rose-950 selection:text-white">
+
+    <div class="pt-12 opacity-40 font-mono text-[10px] tracking-widest">// NET_ROUTER_NODE_v2.06</div>
+
+    <main class="max-w-md w-full mx-auto px-6 text-center space-y-6">
+        
+        <div class="relative inline-block">
+            <div class="text-5xl text-rose-600 animate-pulse">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+            </div>
+            <span class="absolute -top-1 -right-1 flex h-3 w-3">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-rose-500"></span>
+            </span>
+        </div>
+
+        <div class="space-y-2">
+            <h1 class="font-mono text-xs font-bold text-rose-500 tracking-widest uppercase">// ERROR CODE: 404_ROUTE_MISMATCH</h1>
+            <p class="font-mono text-xs text-slate-400 leading-relaxed">
+                The requested subdirectory or subdomain pipeline does not point to an active server block. 
+            </p>
+        </div>
+
+        <div class="bg-slate-950/60 border border-slate-900/80 p-4 rounded-xl font-mono text-xs text-slate-300 space-y-2 max-w-xs mx-auto">
+            <div class="flex justify-between text-[11px] text-slate-500 border-b border-slate-900 pb-1.5">
+                <span>REQUEST HOST:</span>
+                <span id="current-host" class="text-slate-400 font-bold">detecting...</span>
+            </div>
+            <div class="flex justify-between items-center text-[11px] pt-0.5">
+                <span class="flex items-center gap-1.5">
+                    <i class="fa-solid fa-circle-notch animate-spin text-rose-500 text-[10px]"></i> Re-coupling telemetry:
+                </span>
+                <span class="text-rose-400 font-bold"><span id="countdown">10</span>s</span>
+            </div>
+        </div>
+
+        <div>
+            <a href="https://robotlee.xyz" class="inline-flex items-center gap-2 bg-slate-950 hover:bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 font-mono text-[10px] uppercase tracking-wider py-2 px-4 rounded-lg transition duration-150">
+                <i class="fa-solid fa-backward-step text-[9px]"></i> Force Manual Override
+            </a>
+        </div>
+
+    </main>
+
+    <footer class="pb-10 font-mono text-[9px] text-slate-600 tracking-wider">
+        CORE COMMAND DOMAIN INDEX &bull; <a href="https://robotlee.xyz" class="hover:text-slate-400 underline">ROBOTLEE.XYZ</a>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Extract and show the target broken host
+            document.getElementById('current-host').innerText = window.location.hostname;
+
+            let secondsLeft = 10;
+            const countdownEl = document.getElementById('countdown');
+
+            const pipelineTimer = setInterval(() => {
+                secondsLeft--;
+                countdownEl.innerText = secondsLeft;
+
+                if (secondsLeft <= 0) {
+                    clearInterval(pipelineTimer);
+                    // Perform high-priority cross-origin relocation to your main domain core
+                    window.location.href = 'https://robotlee.xyz';
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

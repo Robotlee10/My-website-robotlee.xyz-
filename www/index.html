@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | robotlee.xyz</title>
+    
+    <link class="js-meta-favicon" rel="icon" type="image/png" href="/favicon.png">
+    
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script>
+      window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="manifest" href="/manifest.json">
+    <script>
+        if ('serviceWorker' in navigator) {
+         navigator.serviceWorker.register('/sw.js');
+       }
+    </script>
+
+    <style>
+        .tech-grid-bg {
+            background-color: #020617;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+        @keyframes customFadeIn {
+            0% { opacity: 0; transform: translateY(8px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-up {
+            animation: customFadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+    </style>
+    
+</head>
+<body class="tech-grid-bg text-slate-100 font-sans antialiased selection:bg-slate-800 selection:text-white min-h-screen flex flex-col justify-between">
+
+    <!-- Unified Blurs Header Navigation Component -->
+    <header class="border-b border-slate-900 bg-slate-950/40 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="/" class="flex items-center transition opacity-95 hover:opacity-100">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 100" class="h-12 w-auto">
+      <!-- BRAND MARK (Inspired by 311852.png) -->
+      <g transform="translate(10, 0)">
+        <circle cx="50" cy="50" r="44" fill="none" stroke="#334155" stroke-width="1.5" stroke-dasharray="24 12 8 12"/>
+        <circle cx="50" cy="50" r="38" fill="none" stroke="#475569" stroke-width="1" stroke-dasharray="4 4"/>
+        <circle cx="50" cy="50" r="32" fill="none" stroke="#1e293b" stroke-width="3" stroke-dasharray="12 6"/>
+        <path d="M28 62 C28 62, 44 54, 38 42 C32 30, 58 26, 68 26" fill="none" stroke="#10b981" stroke-width="5" stroke-linecap="round"/>
+        <!-- Emerald Green Core Dot -->
+        <circle cx="52" cy="42" r="5" fill="#10b981"/>
+        <g transform="translate(56, 38) scale(0.45)">
+          <rect x="10" y="10" width="46" height="38" rx="14" fill="#0f172a" stroke="#ffffff" stroke-width="4"/>
+          <rect x="15" y="15" width="36" height="28" rx="9" fill="#1e293b"/>
+          <ellipse cx="26" cy="28" rx="3" ry="4" fill="#10b981"/>
+          <ellipse cx="40" cy="28" rx="3" ry="4" fill="#10b981"/>
+          <path d="M30 34 Q33 37, 36 34" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round"/>
+          <rect x="20" y="48" width="26" height="26" rx="6" fill="#0f172a" stroke="#ffffff" stroke-width="4"/>
+          <rect x="25" y="53" width="16" height="14" rx="3" fill="#10b981" opacity="0.3"/>
+          <path d="M18 54 Q4 46, 2 36" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="2" cy="34" r="3" fill="#10b981"/>
+          <path d="M48 54 Q58 60, 56 68" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+          <rect x="22" y="74" width="8" height="10" rx="2" fill="#0f172a" stroke="#ffffff" stroke-width="3"/>
+          <rect x="36" y="74" width="8" height="10" rx="2" fill="#0f172a" stroke="#ffffff" stroke-width="3"/>
+        </g>
+      </g>
+      <text x="135" y="58" font-family="ui-sans-serif, system-ui, -apple-system, sans-serif" font-weight="900" font-size="34" fill="#ffffff" letter-spacing="-1.5">
+        robotlee<tspan fill="#10b981" font-weight="700">.xyz</tspan>
+      </text>
+      <text x="137" y="76" font-family="font-mono, monospace" font-size="11" font-weight="600" fill="#475569" letter-spacing="1.5">
+        MAIN OPERATIONS SYSTEMS
+      </text>
+    </svg>
+            </a>
+
+            <nav class="flex items-center gap-6 text-xs font-mono tracking-widest text-slate-400">
+                <a href="/" class="text-white font-bold border-b border-white pb-0.5">HOME</a>
+                <a href="/services.html" class="hover:text-slate-200 transition">SERVICES</a>
+                <a href="/about.html" class="hover:text-slate-200 transition">ABOUT</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Workspace Area -->
+    <main class="max-w-5xl mx-auto px-4 py-12 w-full flex-grow space-y-16 animate-fade-up">
+        
+        <!-- Hero Core Message Wrapper -->
+        <section class="py-6 max-w-2xl">
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-slate-900/80 border border-slate-800 rounded-full text-[10px] font-mono tracking-wider text-slate-400 mb-4">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shadow-[0_0_8px_#10b981]"></span>
+                CORE RUNTIME ENVIROMENT V4.2
+            </div>
+            <h1 class="text-2xl sm:text-4xl font-light tracking-tight text-white mb-4 leading-tight font-mono">
+                Engineered Solutions For Complex Systems Architecture
+            </h1>
+            <p class="text-sm text-slate-400 leading-relaxed max-w-xl">
+                Welcome to the central processing matrix. This interface coordinates advanced product blueprints, custom subdomains, deployment schedules, and cloud pipeline tools.
+            </p>
+            <div class="flex flex-wrap gap-4 mt-6">
+                <a href="/services.html" class="bg-emerald-400 text-slate-950 font-mono font-bold text-xs tracking-widest uppercase px-5 py-3 rounded-lg shadow-[0_0_15px_rgba(16,185,129,0.15)] hover:bg-emerald-300 transition">LAUNCH OPERATIONS</a>
+                <a href="/about.html" class="bg-slate-950 border border-slate-900 hover:border-slate-800 text-slate-300 hover:text-white font-mono font-bold text-xs tracking-widest uppercase px-5 py-3 rounded-lg transition">READ DOSSIER</a>
+            </div>
+        </section>
+
+        <!-- 1. Live Status / System Metrics Grid Component -->
+        <section class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-slate-950/30 border border-slate-900 rounded-xl p-4 font-mono">
+                <div class="text-[10px] text-slate-500 tracking-wider uppercase mb-1">SYSTEM STATE</div>
+                <div class="text-xs font-bold text-emerald-400 flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse"></span> ONLINE
+                </div>
+            </div>
+            <div class="bg-slate-950/30 border border-slate-900 rounded-xl p-4 font-mono">
+                <div class="text-[10px] text-slate-500 tracking-wider uppercase mb-1">CORE REGISTRY</div>
+                <div class="text-xs font-bold text-white" id="metric-services">LOADING...</div>
+            </div>
+            <div class="bg-slate-950/30 border border-slate-900 rounded-xl p-4 font-mono">
+                <div class="text-[10px] text-slate-500 tracking-wider uppercase mb-1">DATA PIPELINE</div>
+                <div class="text-xs font-bold text-slate-300">SECURE SSL</div>
+            </div>
+            <div class="bg-slate-950/30 border border-slate-900 rounded-xl p-4 font-mono">
+                <div class="text-[10px] text-slate-500 tracking-wider uppercase mb-1">RUNTIME STAMP</div>
+                <div class="text-xs font-bold text-slate-400" id="live-clock">2026.06.22</div>
+            </div>
+        </section>
+
+        <!-- 2. Featured Services Teaser Section (Dynamic limit 3) -->
+        <section class="space-y-6">
+            <div class="flex justify-between items-end border-b border-slate-900 pb-3">
+                <div>
+                    <h2 class="text-xs font-mono text-slate-400 tracking-widest uppercase">Featured Capabilities</h2>
+                    <p class="text-[11px] text-slate-600 font-mono mt-0.5">Top operations loaded out of core dataset matrix.</p>
+                </div>
+                <a href="/services.html" class="text-xs font-mono text-emerald-400 hover:text-emerald-300 transition flex items-center gap-1 group">
+                    VIEW ALL <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-0.5 transition"></i>
+                </a>
+            </div>
+            <div id="featured-services-container" class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center py-6 text-emerald-500 text-lg font-mono">
+                <i class="fa-solid fa-circle-notch fa-spin"></i>
+            </div>
+        </section>
+
+        <!-- 3. Recent Activity Log / Changelog Component Layout -->
+        <section class="space-y-4">
+            <h2 class="text-xs font-mono text-slate-400 tracking-widest uppercase border-b border-slate-900 pb-2">Central Activity Logs</h2>
+            <div class="bg-slate-950/20 border border-slate-900/60 rounded-xl p-4 font-mono text-xs space-y-2.5 max-w-3xl">
+                <div class="flex items-start gap-4">
+                    <span class="text-emerald-500/70 shrink-0">[2026.06.22]</span>
+                    <span class="text-slate-400">Upgraded centralized operations workspace to complete micro-grid system specs.</span>
+                </div>
+                <div class="flex items-start gap-4">
+                    <span class="text-slate-600 shrink-0">[2026.06.18]</span>
+                    <span class="text-slate-500">Synchronized inquiry processing tunnels securely down inside the <code class="text-slate-400">enquiries</code> data hooks.</span>
+                </div>
+                <div class="flex items-start gap-4">
+                    <span class="text-slate-600 shrink-0">[2026.05.02]</span>
+                    <span class="text-slate-500">Mapped dynamic visual asset rendering proportions rules across the services engine layouts.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Interactive Command-Line Prompt Component Layout -->
+        <section class="space-y-4">
+            <div>
+                <h2 class="text-xs font-mono text-slate-400 tracking-widest uppercase border-b border-slate-900 pb-2">Direct Link CLI Tunnel</h2>
+                <p class="text-[11px] text-slate-600 font-mono mt-1">Interact cleanly with system paths directly via the console string terminal line below.</p>
+            </div>
+            <div class="bg-slate-950 border border-slate-900 rounded-xl p-5 shadow-inner font-mono text-xs min-h-[160px] flex flex-col justify-between" id="cli-box" onclick="document.getElementById('cli-input').focus()">
+                <div id="cli-output" class="space-y-1.5 text-slate-400">
+                    <div class="text-slate-600">Type 'help' to render all navigation coordinates directories.</div>
+                </div>
+                <div class="flex items-center gap-2 pt-4 border-t border-slate-950/80 mt-4">
+                    <span class="text-emerald-400">visitor@robotlee.xyz:~$</span>
+                    <input type="text" id="cli-input" class="bg-transparent border-none outline-none text-white flex-grow p-0 m-0 focus:ring-0" autocomplete="off" spellcheck="false">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Global Layout Core Matrix Footer Component -->
+    <footer class="border-t border-slate-900 py-6 text-center text-[10px] font-mono text-slate-600 bg-slate-950/60 backdrop-blur-sm w-full">
+     <a href="https://tools.robotlee.xyz" class="text-emerald-400 hover:text-emerald-300 transition">Tools</a> &bull; <a href="https://contact.robotlee.xyz" class="text-emerald-400 hover:text-emerald-300 transition">Contact</a> &bull; <a href="https://portfolio.robotlee.xyz" class="text-emerald-400 hover:text-emerald-300 transition">Portfolio</a> &bull; <a href="https://learn.robotlee.xyz" class="text-emerald-400 hover:text-emerald-300 transition">Learn</a> &bull;    &copy; 2026 robotlee.xyz &bull; MAIN OPERATIONS SYSTEMS &bull; All rights reserved
+    </footer>
+
+    <!-- Pipeline Dynamic Integrations Execution Scripts Block -->
+    <script>
+        const supabaseUrl = 'https://yrpfevxzocpedpthknhi.supabase.co';
+        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlycGZldnh6b2NwZWRwdGhrbmhpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE5NDg5NjIsImV4cCI6MjA5NzUyNDk2Mn0.GMxuE_B17gwzUaqPlaHzwlY20i8XYaMNOoxY9WGijLw';
+
+        // Live Operational System Clock Sync Update
+        function updateClock() {
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = String(now.getMonth() + 1).padStart(2, '0');
+            const day = String(now.getDate()).padStart(2, '0');
+            const hours = String(now.getHours()).padStart(2, '0');
+            const mins = String(now.getMinutes()).padStart(2, '0');
+            const secs = String(now.getSeconds()).padStart(2, '0');
+            
+            const clockEl = document.getElementById('live-clock');
+            if(clockEl) clockEl.innerText = `${year}.${month}.${day} // ${hours}:${mins}:${secs}`;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        // Database Pipelines Logic Handling Async Loops
+        async function initHomepagePipelines() {
+            const servicesContainer = document.getElementById('featured-services-container');
+            const servicesMetric = document.getElementById('metric-services');
+
+            try {
+                const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
+
+                // Fetch data cleanly from services table tracking structure rules
+                let { data: services, error } = await supabase
+                    .from('services')
+                    .select('*')
+                    .eq('status', 'active')
+                    .order('sort_order', { ascending: true });
+
+                if (error) throw error;
+
+                if (services && services.length > 0) {
+                    // Update Metric Counters 
+                    if(servicesMetric) servicesMetric.innerText = `${services.length} ACTIVE ENGINES`;
+
+                    // Generate Featured Sub-Grid view preview constraints (Limit 3)
+                    const featured = services.slice(0, 3);
+                    let featHtml = '';
+
+                    featured.forEach(item => {
+                        featHtml += `
+                            <div class="bg-slate-950/30 border border-slate-900 rounded-xl p-5 flex flex-col justify-between text-left transition duration-300 hover:border-slate-800">
+                                <div>
+                                    <h3 class="text-white text-xs font-mono font-bold tracking-tight mb-1.5 uppercase">${item.title || 'Untitled'}</h3>
+                                    <p class="text-[11px] text-slate-400 leading-normal line-clamp-3">${item.description || 'No descriptive specs logged.'}</p>
+                                </div>
+                                <a href="/services.html" class="text-[10px] font-mono text-emerald-400 hover:underline tracking-wider mt-4 block">ANALYZE INDEX &rarr;</a>
+                            </div>
+                        `;
+                    });
+                    if(servicesContainer) servicesContainer.innerHTML = featHtml;
+                } else {
+                    if(servicesMetric) servicesMetric.innerText = '0 ACTIVE';
+                    if(servicesContainer) servicesContainer.innerHTML = '<div class="text-xs text-slate-600 font-mono col-span-3">No active indexes arrayed.</div>';
+                }
+
+            } catch (err) {
+                console.error("Pipeline failure containment protocol triggered:", err);
+                if(servicesContainer) servicesContainer.innerHTML = '<div class="text-xs text-red-500 font-mono col-span-3">Failed to sync matrix assets.</div>';
+            }
+        }
+
+        // Interactive Operational Command-Line Interface Controller Rules
+        const cliInput = document.getElementById('cli-input');
+        const cliOutput = document.getElementById('cli-output');
+
+        if(cliInput) {
+            cliInput.addEventListener('keydown', function(e) {
+                if(e.key === 'Enter') {
+                    const value = cliInput.value.trim().toLowerCase();
+                    cliInput.value = '';
+
+                    // Generate prompt context line history tracker
+                    const line = document.createElement('div');
+                    line.className = 'text-[11px] font-mono mt-1 text-slate-500';
+                    line.innerHTML = `<span class="text-emerald-500/50">visitor@robotlee.xyz:~$</span> ${value}`;
+                    cliOutput.appendChild(line);
+
+                    const response = document.createElement('div');
+                    response.className = 'text-[11px] font-mono text-slate-300 ml-2';
+
+                    // Parse system route arguments patterns matching
+                    if(value === 'help') {
+                        response.innerHTML = `Available system matrix runtime routing pointers:<br>
+                        - <span class="text-emerald-400 font-bold">services</span> : Redirect routing maps directly to /services.html<br>
+                        - <span class="text-emerald-400 font-bold">about</span>    : Redirect routing maps directly to /about.html<br>
+                        - <span class="text-emerald-400 font-bold">clear</span>    : Wipe local console log buffer lines stack`;
+                    } else if(value === 'services') {
+                        response.className = 'text-[11px] font-mono text-emerald-400 ml-2';
+                        response.innerText = 'INITIALIZING REDIRECT CORRIDORS... ACCESSING SERVICES MASTER LOGS...';
+                        setTimeout(() => window.location.href = '/services.html', 800);
+                    } else if(value === 'about') {
+                        response.className = 'text-[11px] font-mono text-emerald-400 ml-2';
+                        response.innerText = 'INITIALIZING REDIRECT CORRIDORS... ACCESSING DEV DOSSIER MATRIX...';
+                        setTimeout(() => window.location.href = '/about.html', 800);
+                    } else if(value === 'clear') {
+                        cliOutput.innerHTML = '';
+                        return;
+                    } else if(value === '') {
+                        return;
+                    } else {
+                        response.className = 'text-[11px] font-mono text-red-400 ml-2';
+                        response.innerText = `Command parsing failure: '${value}' is unrecognized inside central operating structures.`;
+                    }
+
+                    cliOutput.appendChild(response);
+                    
+                    // Auto scroll structural element down nicely
+                    const cliBox = document.getElementById('cli-box');
+                    cliBox.scrollTop = cliBox.scrollHeight;
+                }
+            });
+        }
+
+        window.addEventListener('DOMContentLoaded', initHomepagePipelines);
+    </script>
+</body>
+</html>
