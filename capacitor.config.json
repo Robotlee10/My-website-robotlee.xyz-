@@ -1,0 +1,6 @@
+{
+  "appId": "com.robotlee.myapp",
+  "appName": "Robotlee",
+  "webDir": "www",
+  "bundledWebRuntime": false
+}
