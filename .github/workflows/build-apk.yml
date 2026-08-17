@@ -30,23 +30,25 @@ jobs:
 
       - name: Generate App Icons from Favicon
         run: |
-          # Check if the user uploaded favicon.png
           if [ -f "favicon.png" ]; then
-            echo "favicon.png found! Generating Android launcher icons..."
+            echo "favicon.png found! Cleaning defaults and generating new launcher icons..."
             
-            # Use a fast image converter tool to scale your PNG into all required Android sizes
             sudo apt-get update && sudo apt-get install -y imagemagick
             
             RES_DIR="android/app/src/main/res"
             
-            # Resize and overwrite the default Android template icons
+            # CRITICAL FIX: Delete the default adaptive vector files that block custom PNG icons
+            rm -f $RES_DIR/mipmap-anydpi-v26/ic_launcher.xml
+            rm -f $RES_DIR/mipmap-anydpi-v26/ic_launcher_round.xml
+            
+            # Resize and overwrite standard icon sets
             convert favicon.png -resize 48x48     $RES_DIR/mipmap-mdpi/ic_launcher.png
             convert favicon.png -resize 72x72     $RES_DIR/mipmap-hdpi/ic_launcher.png
             convert favicon.png -resize 96x96     $RES_DIR/mipmap-xhdpi/ic_launcher.png
             convert favicon.png -resize 144x144   $RES_DIR/mipmap-xxhdpi/ic_launcher.png
             convert favicon.png -resize 192x192   $RES_DIR/mipmap-xxxhdpi/ic_launcher.png
             
-            # Also overwrite round icon variations for newer Android models
+            # Resize and overwrite round icon sets
             convert favicon.png -resize 48x48     $RES_DIR/mipmap-mdpi/ic_launcher_round.png
             convert favicon.png -resize 72x72     $RES_DIR/mipmap-hdpi/ic_launcher_round.png
             convert favicon.png -resize 96x96     $RES_DIR/mipmap-xhdpi/ic_launcher_round.png
