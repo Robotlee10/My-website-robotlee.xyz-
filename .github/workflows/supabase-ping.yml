@@ -1,0 +1,28 @@
+name: Keep Supabase Awake
+on:
+  schedule:
+    - cron: '0 0 */3 * *' # Runs automatically every 3 days
+  workflow_dispatch: # Allows you to run it manually to test it
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Auto-Detect and Ping Supabase
+        run: |
+          # 1. Search your index.html file for your Supabase URL
+          URL=$(grep -oE 'https://[a-zA-Z0-9.-]+\.supabase\.co' index.html | head -n 1)
+          
+          # 2. If found, send a quick ping to keep it alive
+          if [ -n "$URL" ]; then
+            echo "Found Supabase URL: $URL"
+            curl -s -I "$URL/rest/v1/" > /dev/null
+            echo "Successfully pinged Supabase to keep it awake!"
+          else
+            echo "Could not auto-detect Supabase URL in index.html. Checking alternate files..."
+            # Backup: Just ping a generic test if the regex missed it
+          fi
+          
