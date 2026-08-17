@@ -1,6 +1,6 @@
 {
   "appId": "com.robotlee.myapp",
   "appName": "Robotlee",
-  "webDir": "."
+  "webDir": "www"
 
 }
