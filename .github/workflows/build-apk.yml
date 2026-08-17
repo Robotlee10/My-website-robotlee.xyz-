@@ -1,0 +1,43 @@
+name: Build Android APK
+on: [workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4.1.1
+        
+      - name: Set Up Java Environment
+        uses: actions/setup-java@v5
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Create Temporary App Directory
+        run: |
+          # Create a temp folder just for the build process
+          mkdir temp_www
+          # Copy your HTML and website files into it dynamically
+          cp *.html temp_www/ 2>/dev/null || true
+          cp *.css temp_www/ 2>/dev/null || true
+          cp *.js temp_www/ 2>/dev/null || true
+          cp *.png temp_www/ 2>/dev/null || true
+
+      - name: Install Android Shell Environment
+        run: |
+          npm install
+          npx cap add android
+          npx cap sync
+          
+      - name: Compile Mobile App Binary
+        run: |
+          cd android
+          chmod +x gradlew
+          ./gradlew assembleDebug
+          
+      - name: Deliver Completed APK Download
+        uses: actions/upload-artifact@v4
+        with:
+          name: compiled-android-apk
+          path: android/app/build/outputs/apk/debug/app-debug.apk
