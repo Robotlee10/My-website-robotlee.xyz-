@@ -16,9 +16,7 @@ jobs:
 
       - name: Create Temporary App Directory
         run: |
-          # Create a temp folder just for the build process
           mkdir temp_www
-          # Copy your HTML and website files into it dynamically
           cp *.html temp_www/ 2>/dev/null || true
           cp *.css temp_www/ 2>/dev/null || true
           cp *.js temp_www/ 2>/dev/null || true
@@ -29,6 +27,34 @@ jobs:
           npm install
           npx cap add android
           npx cap sync
+
+      - name: Generate App Icons from Favicon
+        run: |
+          # Check if the user uploaded favicon.png
+          if [ -f "favicon.png" ]; then
+            echo "favicon.png found! Generating Android launcher icons..."
+            
+            # Use a fast image converter tool to scale your PNG into all required Android sizes
+            sudo apt-get update && sudo apt-get install -y imagemagick
+            
+            RES_DIR="android/app/src/main/res"
+            
+            # Resize and overwrite the default Android template icons
+            convert favicon.png -resize 48x48     $RES_DIR/mipmap-mdpi/ic_launcher.png
+            convert favicon.png -resize 72x72     $RES_DIR/mipmap-hdpi/ic_launcher.png
+            convert favicon.png -resize 96x96     $RES_DIR/mipmap-xhdpi/ic_launcher.png
+            convert favicon.png -resize 144x144   $RES_DIR/mipmap-xxhdpi/ic_launcher.png
+            convert favicon.png -resize 192x192   $RES_DIR/mipmap-xxxhdpi/ic_launcher.png
+            
+            # Also overwrite round icon variations for newer Android models
+            convert favicon.png -resize 48x48     $RES_DIR/mipmap-mdpi/ic_launcher_round.png
+            convert favicon.png -resize 72x72     $RES_DIR/mipmap-hdpi/ic_launcher_round.png
+            convert favicon.png -resize 96x96     $RES_DIR/mipmap-xhdpi/ic_launcher_round.png
+            convert favicon.png -resize 144x144   $RES_DIR/mipmap-xxhdpi/ic_launcher_round.png
+            convert favicon.png -resize 192x192   $RES_DIR/mipmap-xxxhdpi/ic_launcher_round.png
+          else
+            echo "favicon.png not found. Falling back to default Capacitor icon."
+          fi
           
       - name: Compile Mobile App Binary
         run: |
