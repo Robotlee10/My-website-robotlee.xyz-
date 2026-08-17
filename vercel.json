@@ -7,7 +7,7 @@
       "has": [
         {
           "type": "host",
-          "value": "(?<folder>auto|cad|learn|repair|tools|web|portfolio|contact)\\.robotlee\\.xyz"
+          "value": "(?<folder>auto|cad|learn|repair|tools|web|portfolio|contact|www)\\.robotlee\\.xyz"
         }
       ],
       "dest": "/$folder/"
