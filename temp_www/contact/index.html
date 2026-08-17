@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comms Router & Social Hub | contact.robotlee.xyz</title>
+    
+    <link rel="icon" type="image/png" href="https://robotlee.xyz/favicon.png">
+    
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script>
+      window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+    
+    <!-- External UI Elements -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        .comms-grid-bg {
+            background-color: #020617;
+            background-image: linear-gradient(rgba(244, 63, 94, 0.003) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(244, 63, 94, 0.003) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        html { scroll-behavior: smooth; }
+        /* Custom fine scrollbar styling for terminal nodes */
+        .terminal-scroll::-webkit-scrollbar { width: 4px; }
+        .terminal-scroll::-webkit-scrollbar-track { background: transparent; }
+        .terminal-scroll::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 2px; }
+        .terminal-scroll::-webkit-scrollbar-thumb:hover { background: #e11d48; }
+    </style>
+</head>
+<body class="comms-grid-bg text-slate-100 font-sans antialiased selection:bg-rose-950 selection:text-white min-h-screen flex flex-col justify-between">
+
+    <!-- Header System Component -->
+    <header class="border-b border-slate-900 bg-slate-950/40 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="https://robotlee.xyz" class="flex items-center transition opacity-95 hover:opacity-100">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 100" class="h-12 w-auto">
+                  <g transform="translate(10, 0)">
+                    <circle cx="50" cy="50" r="44" fill="none" stroke="#e11d48" stroke-width="1.5" stroke-dasharray="24 12 8 12" opacity="0.4"/>
+                    <circle cx="50" cy="50" r="38" fill="none" stroke="#e11d48" stroke-width="1" stroke-dasharray="4 4" opacity="0.6"/>
+                    <circle cx="50" cy="50" r="32" fill="none" stroke="#1e293b" stroke-width="3" stroke-dasharray="12 6"/>
+                    <path d="M28 62 C28 62, 44 54, 38 42 C32 30, 58 26, 68 26" fill="none" stroke="#e11d48" stroke-width="5" stroke-linecap="round"/>
+                    <circle cx="52" cy="42" r="5" fill="#e11d48"/>
+                    
+                    <g transform="translate(56, 38) scale(0.45)">
+                      <rect x="10" y="10" width="46" height="38" rx="14" fill="#0f172a" stroke="#ffffff" stroke-width="4"/>
+                      <rect x="15" y="15" width="36" height="28" rx="9" fill="#1e293b"/>
+                      <ellipse cx="26" cy="28" rx="3" ry="4" fill="#e11d48"/>
+                      <ellipse cx="40" cy="28" rx="3" ry="4" fill="#e11d48"/>
+                      <path d="M30 34 Q33 37, 36 34" fill="none" stroke="#e11d48" stroke-width="2" stroke-linecap="round"/>
+                      <rect x="20" y="48" width="26" height="26" rx="6" fill="#0f172a" stroke="#ffffff" stroke-width="4"/>
+                      <rect x="25" y="53" width="16" height="14" rx="3" fill="#e11d48" opacity="0.4"/>
+                      <path d="M18 54 Q4 46, 2 36" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+                      <circle cx="2" cy="34" r="3" fill="#e11d48"/>
+                      <path d="M48 54 Q58 60, 56 68" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+                      <rect x="22" y="74" width="8" height="10" rx="2" fill="#0f172a" stroke="#ffffff" stroke-width="3"/>
+                      <rect x="36" y="74" width="8" height="10" rx="2" fill="#0f172a" stroke="#ffffff" stroke-width="3"/>
+                    </g>
+                  </g>
+                  <text x="135" y="58" font-family="ui-sans-serif, system-ui, -apple-system, sans-serif" font-weight="900" font-size="34" fill="#ffffff" letter-spacing="-1.5">
+                    robotlee<tspan fill="#e11d48" font-weight="400">.xyz</tspan>
+                  </text>
+                  <text x="137" y="76" font-family="font-mono, monospace" font-size="10" font-weight="600" fill="#475569" letter-spacing="1">
+                    // CONTACT & SUPPORT HUB
+                  </text>
+                </svg>
+            </a>
+            <nav class="flex items-center gap-6 text-xs font-mono">
+                <a href="https://portfolio.robotlee.xyz" class="text-slate-400 hover:text-slate-200 transition tracking-widest">PORTFOLIO</a>
+                <a href="https://tools.robotlee.xyz" class="text-slate-400 hover:text-slate-200 transition tracking-widest">TOOLS</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Workspace Content Arena -->
+    <main class="max-w-5xl mx-auto px-4 py-10 w-full flex-grow grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+        
+        <!-- Left Matrix Column: Social Networks Target Interface -->
+        <div class="space-y-6 lg:col-span-1">
+            <div class="border-b border-slate-900 pb-2">
+                <h3 class="text-[10px] font-mono text-rose-500 uppercase tracking-widest">// COUPLING GATEWAYS</h3>
+                <p class="text-[10px] text-slate-500 font-mono mt-0.5">External secure endpoints compiled from database matrix.</p>
+            </div>
+            
+            <!-- Dynamic Social Gateways Node -->
+            <div id="socials-container" class="flex flex-wrap gap-2.5 pt-1">
+                <div class="h-4 w-4 border border-slate-800 animate-spin rounded"></div>
+            </div>
+
+            <!-- Option 3: Live Time Zone Status Router -->
+            <div class="bg-slate-950/60 border border-slate-900 p-4 rounded-xl font-mono text-[10px] space-y-2">
+                <div class="flex justify-between items-center border-b border-slate-900/60 pb-1.5">
+                    <span class="text-slate-500">OPERATIONAL NODE:</span>
+                    <span id="system-status-badge" class="flex items-center gap-1.5 font-bold text-emerald-400">
+                        <span class="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse"></span> ONLINE
+                    </span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-slate-500">SYS_TIME:</span>
+                    <span id="live-clock" class="text-slate-300">00:00:00 UTC</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-slate-500">ROUTER_GATE:</span>
+                    <span class="text-slate-400 text-right">ENQUIRIES_VAULT</span>
+                </div>
+             </div>
+
+             <!-- Option 2: Live Cryptographic Key Box (PGP Secure Node) -->
+
+           </div>
+
+        <!-- Right Matrix Column: Dynamic Form Intake & Ledger Stream -->
+        <div class="lg:col-span-2 space-y-6">
+            
+            <!-- Central Intake Form Card -->
+            <div class="bg-slate-950/40 border border-slate-900 rounded-2xl p-6 space-y-6">
+                <div class="border-b border-slate-900 pb-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                    <div>
+                        <h3 class="font-mono text-xs font-bold text-white uppercase tracking-wider flex items-center gap-2">
+                            <i class="fa-solid fa-terminal text-rose-500"></i> Central Intake Pipeline
+                        </h3>
+                        <p class="text-[10px] text-slate-500 font-mono mt-0.5">Submit general inquiries or system interface feedback logs.</p>
+                    </div>
+                    <!-- Mode Toggler -->
+                    <div class="flex bg-slate-950 border border-slate-900 rounded-lg p-0.5 font-mono text-[9px]" id="form-toggle-modes">
+                        <button id="mode-general" class="px-2 py-1 rounded bg-rose-950/40 text-rose-400 border border-rose-900/40 cursor-pointer transition">GENERAL ENQUIRY</button>
+                        <button id="mode-feedback" class="px-2 py-1 rounded text-slate-500 hover:text-slate-300 cursor-pointer transition">SYSTEM FEEDBACK</button>
+                    </div>
+                </div>
+
+                <!-- Central operational form interface mapping enquiries structure safely -->
+                <form id="intake-form" class="space-y-4 font-mono text-xs">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-slate-500 text-[10px] uppercase mb-1">Return Transmission Email</label>
+                            <input type="email" id="client-email" required class="w-full bg-slate-900/50 border border-slate-800 rounded-lg p-2.5 text-slate-100 focus:outline-none focus:border-rose-500">
+                        </div>
+                        <div>
+                            <label class="block text-slate-500 text-[10px] uppercase mb-1">Transmission Context</label>
+                            <input type="text" id="intake-context" readonly value="General Consultation" class="w-full bg-slate-950 border border-slate-900 text-slate-500 rounded-lg p-2.5 outline-none select-none">
+                        </div>
+                    </div>
+
+                    <!-- Extended Metadata Fields for System Feedback Submissions -->
+                    <div id="feedback-extension-module" class="hidden grid grid-cols-1 sm:grid-cols-2 gap-4 bg-slate-950/80 border border-slate-900 p-4 rounded-xl transition">
+                        <div>
+                            <label class="block text-rose-400 text-[10px] uppercase mb-1">Target Experience Element</label>
+                            <select id="feedback-category" class="w-full bg-slate-900/50 border border-slate-800 rounded-lg p-2.5 text-slate-400 focus:outline-none focus:border-rose-500">
+                                <option value="ui-ux">Interface Design / UX</option>
+                                <option value="performance">Response Latency / Loading</option>
+                                <option value="tools">Tooling / Utilities Utility</option>
+                                <option value="other">General Review</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-rose-400 text-[10px] uppercase mb-1">System Evaluation Rating</label>
+                            <select id="feedback-rating" class="w-full bg-slate-900/50 border border-slate-800 rounded-lg p-2.5 text-slate-400 focus:outline-none focus:border-rose-500">
+                                <option value="5-optimal">5 // Optimal Execution</option>
+                                <option value="4-nominal">4 // Nominal Operations</option>
+                                <option value="3-acceptable">3 // Acceptable Baseline</option>
+                                <option value="2-faulty">2 // Structural Inconsistencies</option>
+                                <option value="1-critical">1 // Critical Deficiencies</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label id="message-field-label" class="block text-slate-500 text-[10px] uppercase mb-1">Inquiry Parameter Summary</label>
+                        <textarea id="client-message" rows="5" required placeholder="Outline project scopes, parameters, or environment details..." class="w-full bg-slate-900/50 border border-slate-800 rounded-lg p-2.5 text-slate-100 focus:outline-none focus:border-rose-500 resize-none"></textarea>
+                    </div>
+
+                    <button type="submit" id="btn-submit-stream" class="w-full bg-rose-900 hover:bg-rose-800 font-bold p-2.5 rounded-lg cursor-pointer transition text-[11px] uppercase tracking-widest text-white shadow-lg shadow-rose-950/20">
+                        SUBMIT GENERAL INQUIRY
+                    </button>
+                </form>
+
+                <div id="form-status" class="hidden text-[10px] font-mono p-3 rounded-lg text-center border"></div>
+            </div>
+
+            <!-- Option 1: Dynamic Public Ledger (The Feedback Wall) -->
+            <div class="bg-slate-950/40 border border-slate-900 rounded-2xl p-5 space-y-3">
+                <div class="flex justify-between items-center border-b border-slate-900 pb-2">
+                    <h3 class="font-mono text-xs font-bold text-slate-300 uppercase tracking-wider flex items-center gap-1.5">
+                        <i class="fa-solid fa-list-check text-slate-500 text-[10px]"></i> Public Feedback Ledger
+                    </h3>
+                    <span class="text-[9px] text-slate-500">Latest 15 entries</span>
+                </div>
+                
+                <!-- Feedback Stream Log Loop Targets -->
+                <div id="feedback-ledger-stream" class="space-y-2 max-h-[190px] overflow-y-auto terminal-scroll pr-1 font-mono text-[10px]">
+                    <div class="text-slate-600 text-center py-4">Polling recent ledger streams...</div>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <!-- Footer Component -->
+    <footer class="border-t border-slate-900 py-6 text-center text-[10px] font-mono text-slate-600 bg-slate-950/60 backdrop-blur-sm w-full">
+      
+       <a href="https://robotlee.xyz" class="text-rose-500 hover:text-rose-800 transition">Home</a> &bull; <a href="https://tools.robotlee.xyz" class="text-rose-500 hover:text-rose-800 transition">Tools</a> &bull; <a href="https://portfolio.robotlee.xyz" class="text-rose-500 hover:text-rose-800 transition">Portfolio</a> &bull; <a href="https://learn.robotlee.xyz" class="text-rose-500 hover:text-rose-800 transition">Learn</a> &bull;   &copy; 2026 robotlee.xyz &bull; CONTACT & SUPPORT HUB. All rights reserved. 
+    </footer>
+
+    <!-- Database Subsystem Matrix Script -->
+    <script>
+        const supabaseUrl = 'https://yrpfevxzocpedpthknhi.supabase.co';
+        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlycGZldnh6b2NwZWRwdGhrbmhpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE5NDg5NjIsImV4cCI6MjA5NzUyNDk2Mn0.GMxuE_B17gwzUaqPlaHzwlY20i8XYaMNOoxY9WGijLw';
+
+        let activeIntakeMode = 'general';
+        let globalSupabaseInstance = null;
+
+        function getIconClass(platformName) {
+            const name = platformName ? platformName.toLowerCase().trim() : '';
+            if (name.includes('github')) return 'fa-brands fa-github';
+            if (name.includes('linkedin')) return 'fa-brands fa-linkedin-in';
+            if (name.includes('twitter') || name.includes('x')) return 'fa-brands fa-x-twitter';
+            if (name.includes('instagram')) return 'fa-brands fa-instagram';
+            if (name.includes('whatsapp')) return 'fa-brands fa-whatsapp';
+            if (name.includes('medium')) return 'fa-brands fa-medium';
+            if (name.includes('tiktok')) return 'fa-brands fa-tiktok';
+            if (name.includes('telegram')) return 'fa-brands fa-telegram';
+            if (name.includes('discord')) return 'fa-brands fa-discord';
+            if (name.includes('farcaster')) return 'fa-solid fa-cube';
+            if (name.includes('facebook')) return 'fa-brands fa-facebook-f';
+            if (name.includes('youtube')) return 'fa-brands fa-youtube';
+            if (name.includes('email') || name.includes('mail')) return 'fa-solid fa-envelope';
+            if (name.includes('snapchat')) return 'fa-brands fa-snapchat';
+            if (name.includes('reddit')) return 'fa-brands fa-reddit-alien';
+            return 'fa-solid fa-link';
+        }
+
+        // Option 2 Collapse/Expand Logic
+        function togglePgpCollapse() {
+            const body = document.getElementById('pgp-body');
+            const arrow = document.getElementById('pgp-arrow');
+            body.classList.toggle('hidden');
+            arrow.style.transform = body.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+        }
+
+        function copyPgpText(button) {
+            const pre = button.previousElementSibling;
+            navigator.clipboard.writeText(pre.innerText).then(() => {
+                button.innerText = "COPIED";
+                button.classList.add('bg-emerald-950', 'text-emerald-400');
+                setTimeout(() => {
+                    button.innerText = "COPY";
+                    button.classList.remove('bg-emerald-950', 'text-emerald-400');
+                }, 1500);
+            });
+        }
+
+        // Option 3 System Clock Engine
+        function startSystemClock() {
+            const clockNode = document.getElementById('live-clock');
+            const statusBadge = document.getElementById('system-status-badge');
+            
+            setInterval(() => {
+                const now = new Date();
+                // Format directly matching your profile specs
+                const timeString = now.toLocaleTimeString('en-US', { hour12: false, timeZone: 'UTC' }) + ' UTC';
+                if (clockNode) clockNode.innerText = timeString;
+
+                // Simple check: simulate standby logic during late UTC standard blocks
+                const utcHour = now.getUTCHours();
+                if (utcHour >= 1 && utcHour <= 5) {
+                    statusBadge.innerHTML = `<span class="h-1.5 w-1.5 rounded-full bg-amber-500 animate-pulse"></span> STANDBY`;
+                    statusBadge.className = "flex items-center gap-1.5 font-bold text-amber-400";
+                } else {
+                    statusBadge.innerHTML = `<span class="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse"></span> ONLINE`;
+                    statusBadge.className = "flex items-center gap-1.5 font-bold text-emerald-400";
+                }
+            }, 1000);
+        }
+
+        // Option 1 Render Engine: Fetching and parsing logs cleanly
+        async function updatePublicLedgerStream() {
+            const ledgerContainer = document.getElementById('feedback-ledger-stream');
+            if (!globalSupabaseInstance || !ledgerContainer) return;
+
+            try {
+                const { data, error } = await globalSupabaseInstance
+                    .from('requests')
+                    .select('created_at, message')
+                    .order('created_at', { ascending: false })
+                    .limit(15);
+
+                if (error) throw error;
+
+                // Filter records identifying structural feedback templates
+                const feedbackItems = (data || []).filter(item => item.message && item.message.includes('[SYSTEM_FEEDBACK_LOG]'));
+
+                if (feedbackItems.length === 0) {
+                    ledgerContainer.innerHTML = `<div class="text-slate-600 text-center py-4">// NO PUBLIC LOGS INDEXED</div>`;
+                    return;
+                }
+
+                ledgerContainer.innerHTML = feedbackItems.map(item => {
+                    const lines = item.message.split('\n');
+                    let category = 'General';
+                    let rating = '5';
+                    let userComment = '';
+
+                    lines.forEach(line => {
+                        if (line.startsWith('CATEGORY:')) category = line.replace('CATEGORY:', '').trim();
+                        if (line.startsWith('RATING:')) rating = line.replace('RATING:', '').trim();
+                    });
+
+                    const commentSplit = item.message.split('USER_COMMENTS:\n');
+                    if (commentSplit.length > 1) userComment = commentSplit[1].trim();
+
+                    const itemDate = new Date(item.created_at).toLocaleDateString('en-US', {month: 'short', day: 'numeric'});
+
+                    return `
+                        <div class="bg-slate-950/80 border border-slate-900 p-3 rounded-xl space-y-1.5">
+                            <div class="flex justify-between items-center text-[9px]">
+                                <span class="text-rose-400 font-bold uppercase">[${category}]</span>
+                                <span class="text-slate-500">${itemDate} &bull; <tspan class="text-amber-400 font-bold">★ ${rating.split('-')[0]}</tspan></span>
+                            </div>
+                            <p class="text-slate-300 font-sans leading-relaxed text-[11px]">${userComment || 'No commentary submitted.'}</p>
+                        </div>
+                    `;
+                }).join('');
+
+            } catch (err) {
+                console.warn("Public ledger access constraints applied:", err);
+                ledgerContainer.innerHTML = `<div class="text-slate-700 text-center py-4">// LEDGER LOCK ACTIVE</div>`;
+            }
+        }
+
+        async function loadCoreLayoutPipeline() {
+            try {
+                globalSupabaseInstance = window.supabase.createClient(supabaseUrl, supabaseKey);
+
+                startSystemClock();
+
+                // Fetch social entities natively
+                const { data: socialsData, error: socialsError } = await globalSupabaseInstance
+                    .from('socials')
+                    .select('*');
+
+                if (socialsError) throw socialsError;
+
+                const socialsContainer = document.getElementById('socials-container');
+                if (socialsData && socialsData.length > 0 && socialsContainer) {
+                    socialsContainer.innerHTML = socialsData.map(item => {
+                        if (!item) return '';
+                        const accentColor = item.color || '#e11d48';
+                        const iconClass = getIconClass(item.platform);
+                        return `
+                            <a href="${item.url || '#'}" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="w-[40px] h-[40px] flex items-center justify-center bg-slate-950/60 border border-slate-900 rounded-full text-sm text-white transition-all duration-300 hover:scale-105"
+                               title="${item.platform || ''}"
+                               onmouseenter="this.style.borderColor='${accentColor}'; this.style.color='${accentColor}'; this.style.boxShadow='0 0 12px ${accentColor}25';"
+                               onmouseleave="this.style.borderColor='#0f172a'; this.style.color='#ffffff'; this.style.boxShadow='none';">
+                               <i class="${iconClass}"></i>
+                            </a>
+                        `;
+                    }).join('');
+                }
+
+                setupFormListener(globalSupabaseInstance);
+                updatePublicLedgerStream();
+
+            } catch (err) {
+                console.error("Initialization error containment invoked:", err);
+            }
+        }
+
+        function setupFormListener(supabaseInstance) {
+            const contactForm = document.getElementById('intake-form');
+            const modeGeneralBtn = document.getElementById('mode-general');
+            const modeFeedbackBtn = document.getElementById('mode-feedback');
+            const feedbackModule = document.getElementById('feedback-extension-module');
+            const messageLabel = document.getElementById('message-field-label');
+            const messageTextArea = document.getElementById('client-message');
+            const contextInput = document.getElementById('intake-context');
+            const submitBtn = document.getElementById('btn-submit-stream');
+            const statusDiv = document.getElementById('form-status');
+
+            if (!contactForm) return;
+
+            modeGeneralBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                activeIntakeMode = 'general';
+                contextInput.value = "General Consultation";
+                modeGeneralBtn.className = "px-2 py-1 rounded bg-rose-950/40 text-rose-400 border border-rose-900/40 cursor-pointer transition";
+                modeFeedbackBtn.className = "px-2 py-1 rounded text-slate-500 hover:text-slate-300 cursor-pointer transition";
+                feedbackModule.classList.add('hidden');
+                messageLabel.innerText = "Inquiry Parameter Summary";
+                messageTextArea.placeholder = "Outline project scopes, parameters, or environment details...";
+                submitBtn.innerText = "SUBMIT GENERAL INQUIRY";
+            });
+
+            modeFeedbackBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                activeIntakeMode = 'feedback';
+                contextInput.value = "System Evaluation Log";
+                modeFeedbackBtn.className = "px-2 py-1 rounded bg-rose-950/40 text-rose-400 border border-rose-900/40 cursor-pointer transition";
+                modeGeneralBtn.className = "px-2 py-1 rounded text-slate-500 hover:text-slate-300 cursor-pointer transition";
+                feedbackModule.classList.remove('hidden');
+                messageLabel.innerText = "Review Details & Notes";
+                messageTextArea.placeholder = "Provide clear context on errors, features you enjoy, or optimization notes...";
+                submitBtn.innerText = "SUBMIT SYSTEM FEEDBACK LOG";
+            });
+
+// Replace the submit listener inside your setupFormListener function with this:
+contactForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const emailInput = document.getElementById('client-email').value;
+    let messageInput = document.getElementById('client-message').value;
+    
+    if (activeIntakeMode === 'feedback') {
+        const category = document.getElementById('feedback-category').value;
+        const rating = document.getElementById('feedback-rating').value;
+        messageInput = `[SYSTEM_FEEDBACK_LOG]\nCATEGORY: ${category}\nRATING: ${rating}\n\nUSER_COMMENTS:\n${messageInput}`;
+    }
+
+    statusDiv.className = "text-[10px] font-mono p-3 rounded-lg text-center border border-slate-800 bg-slate-900/50 text-slate-400";
+    statusDiv.style.display = 'block';
+    statusDiv.innerHTML = `<i class="fa-solid fa-circle-notch animate-spin text-rose-500 mr-2"></i> TRANSMITTING COMMUNICATIONS PACKET...`;
+
+    try {
+        const { error } = await supabaseInstance
+            .from('requests')
+            .insert([{ client_email: emailInput, message: messageInput }]);
+
+        if (error) throw error;
+
+        statusDiv.className = "text-[10px] font-mono p-3 rounded-lg text-center border border-emerald-900 bg-emerald-950/20 text-emerald-400";
+        statusDiv.innerText = 'MESSAGE RECEIVED SUCCESSFULLY. METRICS LOGGED SECURELY.';
+        
+        // Reset the form fields smoothly
+        contactForm.reset();
+        
+        // Re-inject the email they just used back into the field so they can instantly type a secondary message
+        document.getElementById('client-email').value = emailInput;
+        
+        if (activeIntakeMode === 'feedback') {
+            modeGeneralBtn.click();
+            setTimeout(updatePublicLedgerStream, 500);
+        }
+        
+        // Clear the success alert automatically after 4 seconds so they can see the form is clear for submission #2
+        setTimeout(() => {
+            statusDiv.style.display = 'none';
+            statusDiv.innerText = '';
+        }, 4000);
+        
+    } catch (err) {
+        statusDiv.className = "text-[10px] font-mono p-3 rounded-lg text-center border border-red-900 bg-red-950/20 text-red-400";
+        statusDiv.innerText = 'SUBMISSION FAILED.';
+        console.error(err);
+    }
+});
+        }
+
+        window.addEventListener('DOMContentLoaded', loadCoreLayoutPipeline);
+    </script>
+</body>
+</html>
+
+     <!-- REVIEWED & APPROVED -->

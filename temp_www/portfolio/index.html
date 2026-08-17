@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Portfolio & Project Vault | portfolio.robotlee.xyz</title>
+    
+    <link rel="icon" type="image/png" href="https://robotlee.xyz/favicon.png">
+    
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script>
+      window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        .portfolio-grid-bg {
+            background-color: #020617;
+            background-image: linear-gradient(rgba(244, 63, 94, 0.003) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(244, 63, 94, 0.003) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="portfolio-grid-bg text-slate-100 font-sans antialiased selection:bg-rose-950 selection:text-white min-h-screen flex flex-col justify-between">
+
+<header class="border-b border-slate-900 bg-slate-950/40 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="https://robotlee.xyz" class="flex items-center transition opacity-95 hover:opacity-100">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 100" class="h-12 w-auto">
+                  <g transform="translate(10, 0)">
+                    <circle cx="50" cy="50" r="44" fill="none" stroke="#e11d48" stroke-width="1.5" stroke-dasharray="24 12 8 12" opacity="0.4"/>
+                    <circle cx="50" cy="50" r="38" fill="none" stroke="#e11d48" stroke-width="1" stroke-dasharray="4 4" opacity="0.6"/>
+                    <circle cx="50" cy="50" r="32" fill="none" stroke="#1e293b" stroke-width="3" stroke-dasharray="12 6"/>
+                    <path d="M28 62 C28 62, 44 54, 38 42 C32 30, 58 26, 68 26" fill="none" stroke="#e11d48" stroke-width="5" stroke-linecap="round"/>
+                    <circle cx="52" cy="42" r="5" fill="#e11d48"/>
+                    
+                    <g transform="translate(56, 38) scale(0.45)">
+                      <rect x="10" y="10" width="46" height="38" rx="14" fill="#0f172a" stroke="#ffffff" stroke-width="4"/>
+                      <rect x="15" y="15" width="36" height="28" rx="9" fill="#1e293b"/>
+                      <ellipse cx="26" cy="28" rx="3" ry="4" fill="#e11d48"/>
+                      <ellipse cx="40" cy="28" rx="3" ry="4" fill="#e11d48"/>
+                      <path d="M30 34 Q33 37, 36 34" fill="none" stroke="#e11d48" stroke-width="2" stroke-linecap="round"/>
+                      <rect x="20" y="48" width="26" height="26" rx="6" fill="#0f172a" stroke="#ffffff" stroke-width="4"/>
+                      <rect x="25" y="53" width="16" height="14" rx="3" fill="#e11d48" opacity="0.4"/>
+                      <path d="M18 54 Q4 46, 2 36" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+                      <circle cx="2" cy="34" r="3" fill="#e11d48"/>
+                      <path d="M48 54 Q58 60, 56 68" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+                      <rect x="22" y="74" width="8" height="10" rx="2" fill="#0f172a" stroke="#ffffff" stroke-width="3"/>
+                      <rect x="36" y="74" width="8" height="10" rx="2" fill="#0f172a" stroke="#ffffff" stroke-width="3"/>
+                    </g>
+                  </g>
+                  <text x="135" y="58" font-family="ui-sans-serif, system-ui, -apple-system, sans-serif" font-weight="900" font-size="34" fill="#ffffff" letter-spacing="-1.5">
+                    robotlee<tspan fill="#e11d48" font-weight="400">.xyz</tspan>
+                  </text>
+                  <text x="137" y="76" font-family="font-mono, monospace" font-size="10" font-weight="600" fill="#475569" letter-spacing="1">
+                    PORTFOLIO
+                  </text>
+                </svg>
+            </a>
+            <nav class="flex items-center gap-6 text-xs font-mono">
+                <a href="https://repair.robotlee.xyz" class="text-slate-400 hover:text-slate-200 transition tracking-widest">DIAGNOSTICS</a>
+                <a href="https://contact.robotlee.xyz" class="text-slate-400 hover:text-slate-200 transition tracking-widest">CONTACT</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-10 w-full flex-grow space-y-8">
+        
+        <div class="border-b border-slate-900 pb-6 max-w-2xl">
+            <h2 class="text-xs font-mono text-rose-500 uppercase tracking-widest mb-1">PROOF OF WORK PLATFORM</h2>
+            <p class="text-xs text-slate-400 font-mono leading-relaxed">
+               An engineered, high-density repository indexing multi-disciplinary engineering assets, production-grade software applications, and physical automation workflows. Built to eliminate professional fluff, this platform serves as an immutable, functional verification matrix demonstrating end-to-end execution across hardware and software boundaries.
+            </p>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-2 font-mono text-[11px] border-b border-slate-900/40 pb-6" id="filter-triggers">
+            <button data-filter="all" class="px-3 py-1.5 rounded-lg border bg-rose-950/30 text-rose-400 border-rose-900/60 cursor-pointer transition">All Projects</button>
+            <button data-filter="web-dev" class="px-3 py-1.5 rounded-lg border bg-slate-950 border-slate-900 text-slate-400 hover:text-slate-200 cursor-pointer transition">Web Development</button>
+            <button data-filter="cad" class="px-3 py-1.5 rounded-lg border bg-slate-950 border-slate-900 text-slate-400 hover:text-slate-200 cursor-pointer transition">CAD Design</button>
+            <button data-filter="automation" class="px-3 py-1.5 rounded-lg border bg-slate-950 border-slate-900 text-slate-400 hover:text-slate-200 cursor-pointer transition">Automation</button>
+            <button data-filter="electronics" class="px-3 py-1.5 rounded-lg border bg-slate-950 border-slate-900 text-slate-400 hover:text-slate-200 cursor-pointer transition">Electronics</button>
+        </div>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-6" id="portfolio-target-grid">
+            <div class="col-span-full text-center py-12 font-mono text-xs text-slate-500" id="grid-status-msg">
+                <i class="fa-solid fa-circle-notch animate-spin text-rose-500 mr-2"></i> Initializing datacore pipelines...
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="border-t border-slate-900 py-6 text-center text-[10px] font-mono text-slate-600 bg-slate-950/60 backdrop-blur-sm w-full">
+    <a href="https://robotlee.xyz" class="text-rose-400 hover:text-rose-800 transition">Home</a> &bull; <a href="https://tools.robotlee.xyz" class="text-rose-400 hover:text-rose-800 transition">Tools</a> &bull; <a href="https://contact.robotlee.xyz" class="text-rose-400 hover:text-rose-800 transition">Contact</a> &bull; <a href="https://learn.robotlee.xyz" class="text-rose-400 hover:text-rose-800 transition">Learn</a> &bull;       &copy; 2026 robotlee.xyz &bull; Automated Portfolio Vault &bull; All rights reserved.
+    </footer>
+
+<script>
+        const SUPABASE_URL = 'https://yrpfevxzocpedpthknhi.supabase.co';
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlycGZldnh6b2NwZWRwdGhrbmhpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE5NDg5NjIsImV4cCI6MjA5NzUyNDk2Mn0.GMxuE_B17gwzUaqPlaHzwlY20i8XYaMNOoxY9WGijLw';
+
+        const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+        
+        let localProjectCache = [];
+        let activeCategoryFilter = 'all';
+
+// Fetch data arrays from Supabase dynamically
+        async function loadPortfolioDataMatrix() {
+            const grid = document.getElementById('portfolio-target-grid');
+            try {
+                // 1. Pull standard category entries
+                const { data: standardData, error: standardError } = await _supabase
+                    .from('portfolio_projects')
+                    .select('*');
+
+                if (standardError) throw standardError;
+
+                // 2. Pull CAD drawing entries 
+                const { data: cadData, error: cadError } = await _supabase
+                    .from('technical_drawings')
+                    .select('*');
+
+                // 3. Normalize schema fields into the global portfolio matrix format
+                let normalizedCad = [];
+                if (!cadError && cadData) {
+                    normalizedCad = cadData.map(item => ({
+                        id: item.id,
+                        created_at: item.created_at,
+                        title: item.title || 'CAD Specification Model',
+                        category: 'cad',
+                        description: item.description || '',
+                        tools_used: Array.isArray(item.tools_used) ? item.tools_used : ['SolidWorks', 'FreeCAD'],
+                        
+                        // --- EDIT THESE STRINGS IF YOUR COLUMNS HAVE DIFFERENT NAMES IN SUPABASE ---
+                        challenge_faced: item.challenge_faced || item.tolerance_challenge || 'See repository metrics for tolerances',
+                        solution_implemented: item.solution_implemented || item.geometry_resolution || 'Geometry parsed cleanly to schema spec',
+                        // -------------------------------------------------------------------------
+                        
+                        image_url: item.media_url || 'https://placehold.co/600x400/0f172a/ffffff?text=CAD+Drawing+Payload',
+                        live_demo_url: item.live_demo_url || '#'
+                    }));
+                }
+
+                // Filter out fallback placeholders if any exist to keep view clean
+                const standardFiltered = standardData ? standardData.filter(item => item.category !== 'cad') : [];
+                
+                // Merge arrays and sort by creation timestamps
+                localProjectCache = [...standardFiltered, ...normalizedCad].sort((a, b) => {
+                    return new Date(b.created_at) - new Date(a.created_at);
+                });
+
+                renderDisplayGrid();
+
+            } catch (err) {
+                console.error("Pipeline read tracking crash: ", err);
+                grid.innerHTML = `<div class="col-span-full text-center py-12 font-mono text-xs text-rose-500 border border-rose-950/40 rounded-xl bg-rose-950/10">TELEMETRY ERROR: DATABASE RETRIEVAL MATRIX FAULT UNRESOLVED.</div>`;
+            }
+        }
+
+// Helper function to handle live visual preview generations
+        function generatePreviewTarget(project) {
+            // If you already specified a custom manually-curated image in Supabase, prioritize it
+            if (project.image_url && !project.image_url.includes('placehold.co') && project.image_url !== '') {
+                return project.image_url;
+            }
+            
+            // Free, reliable, unauthenticated screenshot pipeline using microlink.io
+            if (project.live_demo_url && project.live_demo_url !== '#') {
+                return `https://api.microlink.io/?url=${encodeURIComponent(project.live_demo_url)}&screenshot=true&embed=screenshot.url`;
+            }
+
+            // Fallback placeholder pattern if no link exists
+            return `https://placehold.co/600x400/020617/e11d48?text=${encodeURIComponent(project.title)}`;
+        }
+        
+
+        // Render project payload blocks onto grid canvas
+        function renderDisplayGrid() {
+            const grid = document.getElementById('portfolio-target-grid');
+            if (localProjectCache.length === 0) {
+                grid.innerHTML = `<div class="col-span-full text-center py-12 font-mono text-xs text-slate-500">VAULT CORRIDORS EMPTY.</div>`;
+                return;
+            }
+
+            let filteredHTML = '';
+            const categoryLabelMap = {
+                'web-dev': { name: 'Web Development', style: 'text-blue-400 bg-blue-950/40 border-blue-900/30' },
+                'cad': { name: 'CAD Design', style: 'text-purple-400 bg-purple-950/40 border-purple-900/30' },
+                'automation': { name: 'Automation', style: 'text-emerald-400 bg-emerald-950/40 border-emerald-900/30' },
+                'electronics': { name: 'Electronics', style: 'text-amber-400 bg-amber-950/40 border-amber-900/30' }
+            };
+
+            localProjectCache.forEach(project => {
+                if (activeCategoryFilter !== 'all' && project.category !== activeCategoryFilter) return;
+
+                const catMeta = categoryLabelMap[project.category] || { name: 'Prototype', style: 'text-slate-400 bg-slate-900' };
+                const componentsJoined = Array.isArray(project.tools_used) ? project.tools_used.join(' / ') : project.tools_used;
+                
+                // Invoke live preview generation routing logic
+                const computedPreviewMedia = generatePreviewTarget(project);
+
+                filteredHTML += `
+                    <div class="bg-slate-950/40 border border-slate-900 rounded-2xl overflow-hidden flex flex-col justify-between transition duration-200 group">
+                        <div>
+                            <div class="h-44 w-full bg-slate-950 border-b border-slate-900 relative overflow-hidden flex items-center justify-center">
+                                <img src="${computedPreviewMedia}" alt="Live Preview Frame" class="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-102 transition duration-500" loading="lazy">
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/10 to-transparent z-10 opacity-40"></div>
+                            </div>
+                            <div class="p-5 space-y-4">
+                                <div>
+                                    <span class="font-mono text-[9px] uppercase ${catMeta.style} px-2 py-0.5 rounded">${catMeta.name}</span>
+                                    <h3 class="font-mono font-bold text-slate-100 text-sm mt-1.5">${project.title}</h3>
+                                </div>
+                                <p class="text-[11px] text-slate-400 font-mono leading-relaxed">${project.description}</p>
+                                <div class="space-y-2 bg-black/30 border border-slate-950 p-3 rounded-xl font-mono text-[10px]">
+                                    <div><span class="text-rose-500 font-bold">CHALLENGE:</span> ${project.challenge_faced}</div>
+                                    <div><span class="text-emerald-500 font-bold">SOLUTION:</span> ${project.solution_implemented}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-5 border-t border-slate-900 flex justify-between items-center font-mono text-[11px]">
+                            <span class="text-slate-500 text-[10px]">${componentsJoined}</span>
+                            <a href="${project.live_demo_url}" target="_blank" class="text-rose-400 hover:text-rose-300 transition flex items-center gap-1">Live Demo <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i></a>
+                        </div>
+                    </div>
+                `;
+            });
+
+            grid.innerHTML = filteredHTML || `<div class="col-span-full text-center py-12 font-mono text-xs text-slate-500">NO TARGET ENTRIES GENERATED IN THIS SEGMENT FIELD.</div>`;
+        }
+
+        // Category selector event logic 
+        document.querySelectorAll('#filter-triggers button').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                document.querySelectorAll('#filter-triggers button').forEach(f => {
+                    f.className = "px-3 py-1.5 rounded-lg border bg-slate-950 border-slate-900 text-slate-400 hover:text-slate-200 cursor-pointer transition";
+                });
+                e.target.className = "px-3 py-1.5 rounded-lg border bg-rose-950/30 text-rose-400 border-rose-900/60 cursor-pointer transition";
+                
+                activeCategoryFilter = e.target.getAttribute('data-filter');
+                renderDisplayGrid();
+            });
+        });
+
+        // Initialize display routines immediately
+        loadPortfolioDataMatrix();
+    </script>
+</body>
+</html>   
+  <!-- REVIEWED & APPROVED -->

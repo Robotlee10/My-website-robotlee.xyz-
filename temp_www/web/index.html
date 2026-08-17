@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Architecture Hub | web.robotlee.xyz</title>
+        <!-- 🟢 THIS LINK ADDS THE TAB ICON -->
+    <link class="js-meta-favicon" rel="icon" type="image/png" href="/favicon.png">
+    
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script>
+      window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+    
+    <!-- Tailwind CSS for high-performance styling -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- FontAwesome for technical asset iconography -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Smooth scrolling behavior across internal anchor tags */
+        html { scroll-behavior: smooth; }
+        /* Hide default scrollbars for the telemetry logs */
+        .scrollbar-none::-webkit-scrollbar { display: none; }
+        .scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-blue-500 selection:text-slate-950">
+
+<!-- Navbar -->
+<header class="border-b border-slate-900 bg-slate-900/50 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+        
+        <!-- NEW LOGO INSERTED HERE -->
+        <a href="/" class="flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 100" class="h-12 w-auto">
+              <!-- BRAND MARK (Inspired by 311852.png) -->
+              <g transform="translate(10, 0)">
+                <circle cx="50" cy="50" r="44" fill="none" stroke="#334155" stroke-width="1.5" stroke-dasharray="24 12 8 12"/>
+                <circle cx="50" cy="50" r="38" fill="none" stroke="#475569" stroke-width="1" stroke-dasharray="4 4"/>
+                <circle cx="50" cy="50" r="32" fill="none" stroke="#1e293b" stroke-width="3" stroke-dasharray="12 6"/>
+                <path d="M28 62 C28 62, 44 54, 38 42 C32 30, 58 26, 68 26" fill="none" stroke="#06b6d4" stroke-width="5" stroke-linecap="round"/>
+                <circle cx="52" cy="42" r="5" fill="#3b82f6"/>
+                <g transform="translate(56, 38) scale(0.45)">
+                  <rect x="10" y="10" width="46" height="38" rx="14" fill="#0f172a" stroke="#ffffff" stroke-width="4"/>
+                  <rect x="15" y="15" width="36" height="28" rx="9" fill="#1e293b"/>
+                  <ellipse cx="26" cy="28" rx="3" ry="4" fill="#3b82f6"/>
+                  <ellipse cx="40" cy="28" rx="3" ry="4" fill="#3b82f6"/>
+                  <path d="M30 34 Q33 37, 36 34" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/>
+                  <rect x="20" y="48" width="26" height="26" rx="6" fill="#0f172a" stroke="#ffffff" stroke-width="4"/>
+                  <rect x="25" y="53" width="16" height="14" rx="3" fill="#3b82f6" opacity="0.3"/>
+                  <path d="M18 54 Q4 46, 2 36" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+                  <circle cx="2" cy="34" r="3" fill="#3b82f6"/>
+                  <path d="M48 54 Q58 60, 56 68" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+                  <rect x="22" y="74" width="8" height="10" rx="2" fill="#0f172a" stroke="#ffffff" stroke-width="3"/>
+                  <rect x="36" y="74" width="8" height="10" rx="2" fill="#0f172a" stroke="#ffffff" stroke-width="3"/>
+                </g>
+              </g>
+              <text x="135" y="58" font-family="ui-sans-serif, system-ui, -apple-system, sans-serif" font-weight="900" font-size="34" fill="#ffffff" letter-spacing="-1.5">
+                robotlee<tspan fill="#3b82f6" font-weight="700">.xyz</tspan>
+              </text>
+              <text x="137" y="76" font-family="font-mono, monospace" font-size="11" font-weight="600" fill="#475569" letter-spacing="1.5">
+                WEB DEVELOPMENT HUB
+              </text>
+            </svg>
+        </a>
+        <!-- END NEW LOGO -->
+
+        <nav class="hidden md:flex space-x-6 text-sm font-medium text-slate-400 items-center">
+                <a href="#redesigns" class="hover:text-blue-400 transition">Case Studies</a>
+                <a href="#portfolio" class="hover:text-blue-400 transition">Portfolio</a>
+                <a href="#templates" class="hover:text-blue-400 transition">Templates</a>
+                <a href="#pricing" class="hover:text-blue-400 transition">Pricing</a>
+                <a href="#quote" class="text-blue-400 hover:underline font-semibold">Request a Quote</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="max-w-4xl mx-auto text-center pt-20 pb-12 px-4">
+        <span class="text-xs font-semibold tracking-widest text-blue-400 uppercase bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">Web Performance & Engineering</span>
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white mt-4 mb-6">
+            We Engineer Websites That <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Convert</span>.
+        </h1>
+        <p class="text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
+            Stop losing conversions to slow load times and technical debt. We build lightning-fast, headless architectures and semantic layouts with production-ready compliance out of the box.
+        </p>
+    </section>
+
+    <!-- Production Telemetry Panel: Flawless Lighthouse Diagnostics -->
+    <section class="max-w-4xl mx-auto px-4 pb-16">
+        <div class="bg-slate-900/40 border border-slate-900 rounded-xl p-6 shadow-xl">
+            <div class="flex flex-col md:flex-row justify-between items-center border-b border-slate-800 pb-4 mb-6">
+                <div class="text-center md:text-left mb-4 md:mb-0">
+                    <span class="text-xs font-mono text-slate-500 uppercase block">Engine Audit Standard</span>
+                    <span class="text-sm font-bold text-slate-200 font-mono">GOOGLE LIGHTHOUSE METRICS FRAMEWORK</span>
+                </div>
+                <span class="text-xs text-blue-400 bg-blue-500/10 px-3 py-1 rounded-full font-mono border border-blue-500/20">Target: Flawless Green SLA</span>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-slate-950 border border-slate-800 p-4 rounded-xl text-center">
+                    <div class="h-16 w-16 mx-auto rounded-full border-4 border-emerald-500 flex items-center justify-center mb-2">
+                        <span class="text-xl font-bold text-emerald-400 font-mono">100</span>
+                    </div>
+                    <span class="text-xs font-semibold text-slate-300 uppercase tracking-wide">Performance</span>
+                </div>
+                <div class="bg-slate-950 border border-slate-800 p-4 rounded-xl text-center">
+                    <div class="h-16 w-16 mx-auto rounded-full border-4 border-emerald-500 flex items-center justify-center mb-2">
+                        <span class="text-xl font-bold text-emerald-400 font-mono">100</span>
+                    </div>
+                    <span class="text-xs font-semibold text-slate-300 uppercase tracking-wide">Accessibility</span>
+                </div>
+                <div class="bg-slate-950 border border-slate-800 p-4 rounded-xl text-center">
+                    <div class="h-16 w-16 mx-auto rounded-full border-4 border-emerald-500 flex items-center justify-center mb-2">
+                        <span class="text-xl font-bold text-emerald-400 font-mono">100</span>
+                    </div>
+                    <span class="text-xs font-semibold text-slate-300 uppercase tracking-wide">Best Practices</span>
+                </div>
+                <div class="bg-slate-950 border border-slate-800 p-4 rounded-xl text-center">
+                    <div class="h-16 w-16 mx-auto rounded-full border-4 border-emerald-500 flex items-center justify-center mb-2">
+                        <span class="text-xl font-bold text-emerald-400 font-mono">100</span>
+                    </div>
+                    <span class="text-xs font-semibold text-slate-300 uppercase tracking-wide">SEO Stack</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="border-slate-900 max-w-6xl mx-auto">
+
+    <!-- 1. Before/After Redesign Examples -->
+    <section id="redesigns" class="max-w-6xl mx-auto py-16 px-4">
+        <h2 class="text-2xl font-bold text-white mb-2"><i class="fa-solid fa-shuffle text-blue-400 mr-2"></i> 1. Performance Redesigns</h2>
+        <p class="text-slate-400 mb-8">We don't just shift pixels—we optimize infrastructure, reduce interaction latencies, and save conversion leaks.</p>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Interactive Visual Slider Simulator -->
+            <div class="bg-slate-900 border border-slate-800 rounded-xl p-4 flex flex-col justify-between">
+                <div>
+                    <span class="text-xs font-mono text-blue-400 uppercase tracking-wider block mb-1">Case Study 01 // Fintech Platform</span>
+                    <h3 class="text-lg font-bold text-white mb-3">Headless Migration Loop</h3>
+                </div>
+                <div class="relative w-full h-64 bg-slate-950 rounded-lg overflow-hidden border border-slate-800 select-none">
+                    <!-- Before state layout -->
+                    <div class="absolute inset-0 bg-slate-900 flex flex-col items-center justify-center text-center p-6">
+                        <span class="text-red-400 text-xs font-mono font-bold bg-red-500/10 border border-red-500/20 px-2 py-0.5 rounded mb-2">BEFORE REDESIGN</span>
+                        <p class="text-sm font-serif text-slate-500">Bloated Legacy Theme Engine</p>
+                        <div class="text-xs text-slate-600 font-mono mt-3">Time to Interactive: <span class="text-red-400 font-bold">14.2s</span></div>
+                        <div class="w-32 bg-slate-800 h-2 rounded-full mt-2 overflow-hidden"><div class="bg-red-500 h-full w-[15%]"></div></div>
+                    </div>
+                    <!-- After state slider overlay -->
+                    <div id="slider-after" class="absolute inset-y-0 left-0 bg-gradient-to-br from-blue-950 to-slate-900 border-r-2 border-blue-400 flex flex-col items-center justify-center text-center p-6 overflow-hidden w-1/2">
+                        <div class="min-w-[280px]">
+                            <span class="text-emerald-400 text-xs font-mono font-bold bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded mb-2">AFTER OPTIMIZATION</span>
+                            <p class="text-sm font-mono text-white font-bold tracking-tight">Decoupled Next.js Framework</p>
+                            <div class="text-xs text-slate-400 font-mono mt-3">Time to Interactive: <span class="text-emerald-400 font-bold">0.8s</span></div>
+                            <div class="w-32 bg-slate-950 h-2 rounded-full mx-auto mt-2 overflow-hidden"><div class="bg-emerald-400 h-full w-full"></div></div>
+                        </div>
+                    </div>
+                    <!-- Custom Native Range Controller mapping background -->
+                    <input type="range" min="0" max="100" value="50" id="visual-slider" class="absolute inset-x-0 bottom-4 mx-auto w-[90%] opacity-60 hover:opacity-100 transition accent-blue-400 cursor-ew-resize">
+                </div>
+                <p class="text-xs text-slate-500 mt-4 leading-relaxed font-mono"><i class="fa-solid fa-chart-line text-emerald-400 mr-1"></i> METRIC IMPACT: 38% reduction in page bounce rate; +22% checkout completions.</p>
+            </div>
+
+            <!-- Static Metric Case Study View -->
+            <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl flex flex-col justify-between">
+                <div>
+                    <span class="text-xs font-mono text-blue-400 uppercase tracking-wider block mb-1">Case Study 02 // B2B Enterprise Hub</span>
+                    <h3 class="text-lg font-bold text-white mb-2">SEO Architecture & Discovery Framework</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                        Re-architected messy content routing structures into strict semantic HTML5 tree layouts containing pre-compiled JSON-LD structural indexing.
+                    </p>
+                </div>
+                <div class="space-y-3 font-mono text-xs">
+                    <div class="bg-slate-950 p-3 rounded border border-slate-800 flex justify-between items-center">
+                        <span class="text-slate-400">Information Architecture</span>
+                        <span class="text-red-400 font-bold">Confusing / Hidden Links</span>
+                    </div>
+                    <div class="bg-slate-950 p-3 rounded border border-slate-800 flex justify-between items-center">
+                        <span class="text-slate-400">Search Crawler Indexing</span>
+                        <span class="text-emerald-400 font-bold">Semantic HTML5 + Automated Schema</span>
+                    </div>
+                </div>
+                <p class="text-xs text-slate-500 mt-4 leading-relaxed font-mono"><i class="fa-solid fa-chart-line text-emerald-400 mr-1"></i> METRIC IMPACT: 3x organic pipeline inbound lead capture metrics within 90 days.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Website Portfolio -->
+    <section id="portfolio" class="max-w-6xl mx-auto py-16 px-4">
+        <h2 class="text-2xl font-bold text-white mb-2"><i class="fa-solid fa-folder-open text-blue-400 mr-2"></i> 2. Portfolio Register</h2>
+        <p class="text-slate-400 mb-8">Production ecosystems meticulously engineered for explicit client performance parameters.</p>
+        
+        <div class="overflow-x-auto border border-slate-800 rounded-xl bg-slate-900 shadow-xl">
+            <table class="w-full text-left text-sm">
+                <thead class="bg-slate-800/50 text-slate-300 font-mono text-xs uppercase border-b border-slate-800">
+                    <tr>
+                        <th class="p-4">Project Deployment</th>
+                        <th class="p-4">Architecture Stack</th>
+                        <th class="p-4">Performance Highlights</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-800 text-slate-400">
+                    <tr>
+                        <td class="p-4 font-semibold text-white">SaaS Analytics Dashboard</td>
+                        <td class="p-4 font-mono text-xs text-blue-400">React, TypeScript, Tailwind, Chart.js</td>
+                        <td class="p-4">Sub-100ms client state canvas calculations.</td>
+                    </tr>
+                    <tr>
+                        <td class="p-4 font-semibold text-white">Headless Retail Infrastructure</td>
+                        <td class="p-4 font-mono text-xs text-blue-400">Next.js, Shopify Storefront API, Sanity CMS</td>
+                        <td class="p-4">Global edge serverless edge route compilation.</td>
+                    </tr>
+                    <tr>
+                        <td class="p-4 font-semibold text-white">Real Estate Search Indexer</td>
+                        <td class="p-4 font-mono text-xs text-blue-400">Node.js, Express, PostgreSQL, Mapbox</td>
+                        <td class="p-4">Indexed spatial query loops processing 50k+ records.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 3. Website Templates -->
+    <section id="templates" class="max-w-6xl mx-auto py-16 px-4 bg-slate-900/30 rounded-3xl my-8 border border-slate-900">
+        <h2 class="text-2xl font-bold text-white mb-2"><i class="fa-solid fa-cubes text-blue-400 mr-2"></i> 3. Pre-Engineered Boilerplates</h2>
+        <p class="text-slate-400 mb-8">Production ready template files setup to skip early development hurdles entirely.</p>
+        
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="text-blue-400 text-xl"><i class="fa-brands fa-react"></i></div>
+                    <span class="text-[10px] font-mono bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded border border-blue-500/20">Production Ready</span>
+                </div>
+                <h3 class="text-md font-bold text-white font-mono mb-2">nextjs-tailwind-core</h3>
+                <p class="text-xs text-slate-400 leading-relaxed mb-4">Equipped with strict TypeScript compilation metrics, route layout safeguards, and automatic meta parsing blocks handles SEO rules natively.</p>
+            </div>
+            <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="text-blue-400 text-xl"><i class="fa-solid fa-code"></i></div>
+                    <span class="text-[10px] font-mono bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded border border-blue-500/20">100/100 Audit</span>
+                </div>
+                <h3 class="text-md font-bold text-white font-mono mb-2">vanilla-semantic-lightspeed</h3>
+                <p class="text-xs text-slate-400 leading-relaxed mb-4">Zero third-party code payload. Pure structural HTML5 markup matched with lightweight modular layout files built for instant speed.</p>
+            </div>
+            <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="text-blue-400 text-xl"><i class="fa-solid fa-basket-shopping"></i></div>
+                    <span class="text-[10px] font-mono bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded border border-blue-500/20">Headless API</span>
+                </div>
+                <h3 class="text-md font-bold text-white font-mono mb-2">headless-commerce-starter</h3>
+                <p class="text-xs text-slate-400 leading-relaxed mb-4">Configured specifically for distributed decoupled retail networks. Contains preconfigured webhook targets mapping clean transaction states.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Pricing Packages & 5. Client Testimonials -->
+    <section id="pricing" class="max-w-6xl mx-auto py-16 px-4">
+        <div class="grid md:grid-cols-3 gap-8 items-start">
+            <!-- Pricing Matrix Container -->
+            <div class="md:col-span-2 space-y-4">
+                <h2 class="text-2xl font-bold text-white mb-2"><i class="fa-solid fa-tags text-blue-400 mr-2"></i> 4. Transparent Packages</h2>
+                <p class="text-slate-400 mb-6">Zero technical debt accumulation, no hidden pricing updates. Transparent scoping structures.</p>
+                
+                <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl flex justify-between items-center">
+                    <div>
+                        <span class="text-xs font-mono text-blue-400 block uppercase">Core Tier</span>
+                        <h3 class="text-lg font-bold text-white">Conversion Launchpad</h3>
+                        <p class="text-xs text-slate-400 mt-1">Semantic single-view frameworks, full layout optimization, responsive tracking loops.</p>
+                    </div>
+                    <div class="text-right pl-4">
+                        <span class="text-2xl font-black text-white font-mono">$2,450</span>
+                    </div>
+                </div>
+                <div class="bg-slate-900 border-2 border-blue-500/30 p-5 rounded-xl flex justify-between items-center shadow-lg relative">
+                    <span class="absolute -top-2.5 right-4 bg-blue-500 text-slate-950 text-[9px] font-mono font-bold px-2 py-0.5 rounded uppercase tracking-wider">Most Requested Architecture</span>
+                    <div>
+                        <span class="text-xs font-mono text-cyan-400 block uppercase">Growth Tier</span>
+                        <h3 class="text-lg font-bold text-white">Decoupled Content Platform</h3>
+                        <p class="text-xs text-slate-400 mt-1">Headless CMS link deployments, dynamic route compilation frameworks, conditional query captures.</p>
+                    </div>
+                    <div class="text-right pl-4">
+                        <span class="text-2xl font-black text-blue-400 font-mono">$4,950</span>
+                    </div>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl flex justify-between items-center">
+                    <div>
+                        <span class="text-xs font-mono text-slate-500 block uppercase">Custom Tier</span>
+                        <h3 class="text-lg font-bold text-white">Enterprise Infrastructure</h3>
+                        <p class="text-xs text-slate-400 mt-1">Distributed micro-frontend routing configurations, complex state systems, custom data engines.</p>
+                    </div>
+                    <div class="text-right pl-4">
+                        <span class="text-sm font-bold text-slate-400 font-mono uppercase tracking-wide">Custom Quote</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonials Container -->
+            <div>
+                <h2 class="text-2xl font-bold text-white mb-2"><i class="fa-solid fa-comments text-blue-400 mr-2"></i> 5. Engineering Proof</h2>
+                <p class="text-slate-400 mb-6">Validation loops straight from production operators.</p>
+                <div class="space-y-4">
+                    <div class="bg-slate-900/60 border border-slate-900 p-4 rounded-xl relative">
+                        <p class="text-xs text-slate-400 italic leading-relaxed">
+                            "Our site speed was single-handedly tanking our ad conversions. Lee migrated us over to a decoupled headless architecture, and our performance scores went completely green overnight. The engineering precision is unmatched."
+                        </p>
+                        <span class="text-[10px] font-mono font-bold text-white block mt-3">— Sarah Jenkins, VP of Growth, ApexMedia</span>
+                    </div>
+                    <div class="bg-slate-900/60 border border-slate-900 p-4 rounded-xl relative">
+                        <p class="text-xs text-slate-400 italic leading-relaxed">
+                            "Most developers just build what looks good. Lee engineered an actual web framework that thinks about database performance and lead capture flow logic. It's essentially an automated revenue engine."
+                        </p>
+                        <span class="text-[10px] font-mono font-bold text-white block mt-3">— David Chen, Founder, HorizonLogistics</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Request-A-Quote Interactive Widget Engine -->
+    <section id="quote" class="max-w-4xl mx-auto py-16 px-4 mb-20">
+        <div class="bg-gradient-to-br from-slate-900 to-slate-950 border-2 border-blue-500/20 rounded-2xl p-6 md:p-10 shadow-xl">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-extrabold text-white mb-2"><i class="fa-solid fa-calculator text-blue-400 mr-2"></i> 6. Interactive Deployment Estimator</h2>
+                <p class="text-sm text-slate-400">Configure your target architectural variables to evaluate project scoping baselines instantly.</p>
+            </div>
+            
+            <form class="grid md:grid-cols-2 gap-8 items-center" onsubmit="event.preventDefault();">
+                <!-- Dropdown configurations -->
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-mono uppercase tracking-wider text-slate-400 mb-1">Target Core Architecture Blueprint</label>
+                        <select id="param-arch" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-blue-500 font-mono text-sm">
+                            <option value="1500">Static Optimized Marketing Hub</option>
+                            <option value="3200" selected>Decoupled Headless Framework (Next.js)</option>
+                            <option value="4500">Relational E-Commerce App Storefront</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-mono uppercase tracking-wider text-slate-400 mb-1">Estimated Custom View Layout Scope</label>
+                        <select id="param-views" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-blue-500 font-mono text-sm">
+                            <option value="500">1 - 3 Bespoke Structural Views</option>
+                            <option value="1200" selected>4 - 7 Complex Data Views</option>
+                            <option value="2500">8+ Advanced Routed Templates</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-mono uppercase tracking-wider text-slate-400 mb-1">Required System Integration Layer</label>
+                        <select id="param-integrations" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-blue-500 font-mono text-sm">
+                            <option value="0">Standard Form Logic Webhooks Only</option>
+                            <option value="750" selected>Decoupled Headless CMS Connection</option>
+                            <option value="1500">Secure Payment Engine + Multi-Tenant Storage API</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Live Dynamic Realtime Output View Display Box -->
+                <div class="bg-slate-950 border border-slate-800 p-6 rounded-xl text-center flex flex-col justify-center items-center">
+                    <span class="text-xs font-mono text-slate-500 uppercase tracking-widest">Estimated Scoping Investment</span>
+                    <div class="text-5xl font-black text-blue-400 my-2">$<span id="price-output">5,150</span></div>
+                    <span class="text-sm font-semibold text-white uppercase tracking-wider">Project Engineering Blueprint</span>
+                    <p class="text-xs text-slate-400 mt-4 max-w-xs leading-normal">
+                        Calculations represent precise component configuration pipelines. Ready to freeze this configuration?
+                    </p>
+                    <a href="https://contact.robotlee.xyz" class="mt-5 w-full bg-blue-500 hover:bg-blue-600 text-slate-950 font-bold py-2.5 rounded-lg text-xs tracking-wide uppercase transition block shadow-lg">
+                        <i class="fa-solid fa-paper-plane mr-1"></i> Lock Architecture Quote
+                    </a>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-900 py-8 text-center text-xs font-mono text-slate-600">
+      <a href="https://robotlee.xyz" class="text-blue-400 hover:text-emerald-800 transition">Home</a> &bull; <a href="https://tools.robotlee.xyz" class="text-blue-400 hover:text-emerald-800 transition">Tools</a> &bull; <a href="https://contact.robotlee.xyz" class="text-blue-400 hover:text-emerald-800 transition">Contact</a> &bull; <a href="https://portfolio.robotlee.xyz" class="text-blue-400 hover:text-emerald-800 transition">Portfolio</a> &bull; <a href="https://learn.robotlee.xyz" class="text-blue-400 hover:text-emerald-800 transition">Learn</a> &bull;     &copy; 2026 robotlee.xyz &bull; WEB DEVELOPMENT HUB &bull; All rights reserved
+    </footer>
+
+    <!-- Interactive Component State Management Engines -->
+    <script>
+        // 1. Before/After Visual Interactive Split-Slider Engine Logic
+        const rangeSlider = document.getElementById('visual-slider');
+        const overlayAfter = document.getElementById('slider-after');
+
+        rangeSlider.addEventListener('input', (e) => {
+            overlayAfter.style.width = `${e.target.value}%`;
+        });
+
+        // 2. Dynamic Realtime Interactive Cost Valuation Estimate Engine
+        const archInput = document.getElementById('param-arch');
+        const viewsInput = document.getElementById('param-views');
+        const integrationInput = document.getElementById('param-integrations');
+        const priceDisplay = document.getElementById('price-output');
+
+        function estimateProjectInvestment() {
+            const valArch = parseFloat(archInput.value) || 0;
+            const valViews = parseFloat(viewsInput.value) || 0;
+            const valInteg = parseFloat(integrationInput.value) || 0;
+
+            // Computational Core Formula Structure
+            const grossScopingInvestment = valArch + valViews + valInteg;
+            priceDisplay.textContent = grossScopingInvestment.toLocaleString();
+        }
+
+        [archInput, viewsInput, integrationInput].forEach(selectorElement => {
+            selectorElement.addEventListener('change', estimateProjectInvestment);
+        });
+    </script>
+</body>
+</html>
+
+  <!-- REVIEWED & APPROVED -->
