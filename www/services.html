@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services Offered | robotlee.xyz</title>
+    
+    <link class="js-meta-favicon" rel="icon" type="image/png" href="/favicon.png">
+    
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script>
+      window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        .tech-grid-bg {
+            background-color: #020617;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+        @keyframes customFadeIn {
+            0% { opacity: 0; transform: translateY(8px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            animation: customFadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+    </style>
+</head>
+<body class="tech-grid-bg text-slate-100 font-sans antialiased selection:bg-slate-800 selection:text-white min-h-screen flex flex-col justify-between">
+
+    <header class="border-b border-slate-900 bg-slate-950/40 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="/" class="flex items-center transition opacity-95 hover:opacity-100">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 100" class="h-12 w-auto">
+      <!-- BRAND MARK (Inspired by 311852.png) -->
+      <g transform="translate(10, 0)">
+        <circle cx="50" cy="50" r="44" fill="none" stroke="#334155" stroke-width="1.5" stroke-dasharray="24 12 8 12"/>
+        <circle cx="50" cy="50" r="38" fill="none" stroke="#475569" stroke-width="1" stroke-dasharray="4 4"/>
+        <circle cx="50" cy="50" r="32" fill="none" stroke="#1e293b" stroke-width="3" stroke-dasharray="12 6"/>
+        <path d="M28 62 C28 62, 44 54, 38 42 C32 30, 58 26, 68 26" fill="none" stroke="#10b981" stroke-width="5" stroke-linecap="round"/>
+        <!-- Emerald Green Core Dot -->
+        <circle cx="52" cy="42" r="5" fill="#10b981"/>
+        <g transform="translate(56, 38) scale(0.45)">
+          <rect x="10" y="10" width="46" height="38" rx="14" fill="#0f172a" stroke="#ffffff" stroke-width="4"/>
+          <rect x="15" y="15" width="36" height="28" rx="9" fill="#1e293b"/>
+          <ellipse cx="26" cy="28" rx="3" ry="4" fill="#10b981"/>
+          <ellipse cx="40" cy="28" rx="3" ry="4" fill="#10b981"/>
+          <path d="M30 34 Q33 37, 36 34" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round"/>
+          <rect x="20" y="48" width="26" height="26" rx="6" fill="#0f172a" stroke="#ffffff" stroke-width="4"/>
+          <rect x="25" y="53" width="16" height="14" rx="3" fill="#10b981" opacity="0.3"/>
+          <path d="M18 54 Q4 46, 2 36" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="2" cy="34" r="3" fill="#10b981"/>
+          <path d="M48 54 Q58 60, 56 68" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+          <rect x="22" y="74" width="8" height="10" rx="2" fill="#0f172a" stroke="#ffffff" stroke-width="3"/>
+          <rect x="36" y="74" width="8" height="10" rx="2" fill="#0f172a" stroke="#ffffff" stroke-width="3"/>
+        </g>
+      </g>
+      <text x="135" y="58" font-family="ui-sans-serif, system-ui, -apple-system, sans-serif" font-weight="900" font-size="34" fill="#ffffff" letter-spacing="-1.5">
+        robotlee<tspan fill="#10b981" font-weight="700">.xyz</tspan>
+      </text>
+      <text x="137" y="76" font-family="font-mono, monospace" font-size="11" font-weight="600" fill="#475569" letter-spacing="1.5">
+       SERVICES HUB
+      </text>
+    </svg>
+            </a>
+
+            <nav class="flex items-center gap-6 text-xs font-mono tracking-widest text-slate-400">
+                <a href="/" class="hover:text-slate-200 transition">HOME</a>
+                <a href="/services.html" class="text-white font-bold border-b border-white pb-0.5">SERVICES</a>
+                <a href="/about.html" class="hover:text-slate-200 transition">ABOUT</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 py-16 w-full flex-grow flex flex-col justify-start">
+        
+        <section class="text-center mb-12">
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-slate-900/80 border border-slate-800 rounded-full text-[11px] font-mono tracking-wider text-slate-400 mb-4">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_#10b981]"></span>
+                OPERATIONAL INDEX DIRECTORY
+            </div>
+            <h1 class="text-xl sm:text-2xl font-light tracking-wide text-slate-300 font-mono uppercase">
+                Services Offered
+            </h1>
+        </section>
+
+        <div id="services-container" class="w-full text-center py-12 text-emerald-500 text-2xl">
+            <i class="fa-solid fa-circle-notch fa-spin"></i>
+        </div>
+
+    </main>
+
+    <footer class="border-t border-slate-900 py-6 text-center text-[10px] font-mono text-slate-600 bg-slate-950/60 backdrop-blur-sm w-full">
+      <a href="https://robotlee.xyz" class="text-emerald-400 hover:text-emerald-300 transition">Home</a> &bull; <a href="https://tools.robotlee.xyz" class="text-emerald-400 hover:text-emerald-300 transition">Tools</a> &bull; <a href="https://contact.robotlee.xyz" class="text-emerald-400 hover:text-emerald-300 transition">Contact</a> &bull; <a href="https://portfolio.robotlee.xyz" class="text-emerald-400 hover:text-emerald-300 transition">Portfolio</a> &bull; <a href="https://learn.robotlee.xyz" class="text-emerald-400 hover:text-emerald-300 transition">Learn</a> &bull;   &copy; 2026 robotlee.xyz &bull; SERVICES &bull; All rights reserved 
+    </footer>
+
+    <script>
+        const supabaseUrl = 'https://yrpfevxzocpedpthknhi.supabase.co';
+        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlycGZldnh6b2NwZWRwdGhrbmhpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE5NDg5NjIsImV4cCI6MjA5NzUyNDk2Mn0.GMxuE_B17gwzUaqPlaHzwlY20i8XYaMNOoxY9WGijLw';
+
+        async function loadServicesPage() {
+            const container = document.getElementById('services-container');
+            
+            try {
+                const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
+
+                let { data: services, error } = await supabase
+                .from('services')
+                .select('*')
+                .eq('status', 'active')
+                .order('sort_order', { ascending: true });
+
+                if (error) {
+                    container.innerHTML = `<div class="font-mono text-xs text-red-500 bg-red-950/20 border border-red-900/50 p-4 rounded-xl inline-block">Error: Please try again later.</div>`;
+                    return;
+                }
+
+                if (!services || services.length === 0) {
+                    container.innerHTML = '<div class="font-mono text-xs text-slate-500">No active services found.</div>';
+                    return;
+                }
+
+                let gridHtml = '<div class="services-grid">';
+                
+                services.forEach(service => {
+                    const databaseLink = service.whatsapp_url || service.link_url || '';
+                    const customUrl = databaseLink.trim() !== '' ? databaseLink.trim() : 'https://wa.me/';
+
+                    const buttonText = service.cta_text && service.cta_text.trim() !== '' 
+                        ? service.cta_text.trim() 
+                        : 'Inquiry Service';
+
+                    const learnMoreMarkup = service.subdomain_url && service.subdomain_url.trim() !== ''
+                        ? `<a href="${service.subdomain_url.trim()}" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-slate-950/60 hover:bg-slate-900/40 text-slate-400 hover:text-white border border-slate-900 hover:border-slate-800 p-3 rounded-lg text-xs font-mono font-bold tracking-widest transition-all duration-200 group">
+                            <span>EXPLORE SUBDOMAIN</span> <i class="fa-solid fa-arrow-right text-[10px] text-slate-600 group-hover:text-emerald-400 group-hover:translate-x-0.5 transition-all"></i>
+                           </a>`
+                        : '';
+
+                    const imageMarkup = service.image_url 
+                        ? `<img src="${service.image_url}" class="w-[200px] h-[150px] object-cover rounded-lg mx-auto mb-4 border border-slate-900/60" alt="${service.title || 'Service Image'}">`
+                        : '';
+
+                    gridHtml += `
+                        <div class="bg-slate-950/30 border border-slate-900 hover:border-emerald-500/30 rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-lg shadow-slate-950/40">
+                            <div>
+                                ${imageMarkup}
+                                <h3 class="text-white font-mono font-bold text-base tracking-tight text-center mb-2">${service.title || 'Untitled Service'}</h3>
+                                <p class="text-xs text-slate-400 font-normal leading-relaxed text-center mb-6 max-w-sm mx-auto">${service.description || 'No description provided.'}</p>
+                            </div>
+                            <div class="flex flex-col gap-2.5 mt-auto">
+                                <a href="${customUrl}" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-transparent text-emerald-400 hover:text-slate-950 border border-emerald-500/40 hover:bg-emerald-400 p-3 rounded-lg text-xs font-mono font-bold tracking-widest transition-all duration-300 hover:shadow-[0_0_15px_rgba(16,185,129,0.2)]">
+                                    <i class="fa-brands fa-whatsapp text-sm"></i> <span>${buttonText.toUpperCase()}</span>
+                                </a>
+                                ${learnMoreMarkup}
+                            </div>
+                        </div>
+                    `;
+                });
+
+                gridHtml += '</div>';
+                container.innerHTML = gridHtml;
+
+            } catch (err) {
+                container.innerHTML = `<div class="font-mono text-xs text-red-500 bg-red-950/20 border border-red-900/50 p-4 rounded-xl inline-block">Error: Please try again later.</div>`;
+            }
+        }
+
+        loadServicesPage();
+    </script>
+</body>
+</html>
