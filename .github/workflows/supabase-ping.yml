@@ -3,7 +3,8 @@ on:
   schedule:
     - cron: '0 * * * *' # Runs automatically every hour
   workflow_dispatch: # Allows manual triggers
-
+env:
+  ACTIONS_ALLOW_USE_UNSECURE_NODE20: true
 jobs:
   ping:
     runs-on: ubuntu-latest
