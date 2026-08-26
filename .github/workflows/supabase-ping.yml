@@ -1,7 +1,7 @@
 name: Keep Supabase Awake
 on:
   schedule:
-    - cron: '0 0 */3 * *' # Runs automatically every 3 days
+    - cron: '0 * * * *' # Runs automatically every hour
   workflow_dispatch: # Allows you to run it manually to test it
 
 jobs:
@@ -13,16 +13,19 @@ jobs:
 
       - name: Auto-Detect and Ping Supabase
         run: |
-          # 1. Search your index.html file for your Supabase URL
-          URL=$(grep -oE 'https://[a-zA-Z0-9.-]+\.supabase\.co' index.html | head -n 1)
-          
-          # 2. If found, send a quick ping to keep it alive
-          if [ -n "$URL" ]; then
-            echo "Found Supabase URL: $URL"
-            curl -s -I "$URL/rest/v1/" > /dev/null
-            echo "Successfully pinged Supabase to keep it awake!"
+          # 1. Search all .html files for unique Supabase URLs
+          URLS=$(grep -oE 'https://[a-zA-Z0-9.-]+\.supabase\.co' *.html 2>/dev/null | cut -d: -f2- | sort -u)
+
+          # 2. Loop through each URL found and ping it
+          if [ -n "$URLS" ]; then
+            echo "Found the following Supabase URLs:"
+            echo "$URLS"
+            
+            for URL in $URLS; do
+              echo "Pinging: $URL"
+              curl -s -I "$URL/rest/v1/" > /dev/null
+            done
+            echo "Successfully pinged all Supabase instances!"
           else
-            echo "Could not auto-detect Supabase URL in index.html. Checking alternate files..."
-            # Backup: Just ping a generic test if the regex missed it
+            echo "No Supabase URLs found across HTML files."
           fi
-          
